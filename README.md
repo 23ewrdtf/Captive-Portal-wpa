@@ -16,11 +16,13 @@ Connect to the SSH and run below command. You can get the IP address from IP sca
 sudo -i
 ```
 
+Before running below command **REPLACE** `ExternalWiFiSSID` and `ExternalWiFiPassword` with the wifi you want RPI to connect to.
+
 ```
 curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/tretos53/Captive-Portal-wpa/master/captiveportal-wpa.sh | bash $0 ExternalWiFiSSID ExternalWiFiPassword
 ```
 
-By default this will run in Captive Portal Mode. To change the mode, SSH to the pi and run bash wlan.sh or bash ap.sh respectively.
+By default this will run in Captive Portal Mode. To change the mode, SSH to the pi and run `bash wlan.sh` or `bash ap.sh` respectively.
 
 ## To Do
 
