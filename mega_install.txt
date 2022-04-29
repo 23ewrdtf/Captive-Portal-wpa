@@ -1,0 +1,20 @@
+mkdir nomad_content
+mkdir nomad_version
+
+wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal-wpa/master/local_version.txt -O nomad_version/local_version.txt
+
+
+# Mega install section
+# Open and add below to nano /etc/apt/sources.list
+
+deb http://raspbian.raspberrypi.org/raspbian/ bullseye main contrib non-free rpi
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+#deb-src http://raspbian.raspberrypi.org/raspbian/ bullseye main contrib non-free rpi
+
+# Source Repository for Mega-CMD and Mega Desktop (For Raspbian ARM)
+# Updated Mega Repo with 4092 bit Release Key
+deb [arch=armhf] https://mega.nz/linux/repo/Raspbian_11/ ./
+
+
+apt update
+apt install megacmd -y
